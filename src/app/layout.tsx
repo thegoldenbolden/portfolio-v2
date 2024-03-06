@@ -1,4 +1,3 @@
-import { Analytics } from "@vercel/analytics/react";
 import { GeistSans } from "geist/font/sans";
 import type { Metadata } from "next";
 import "./globals.css";
@@ -32,10 +31,7 @@ export default function RootLayout(
   return (
     <html lang="en" className={`antialiased ${GeistSans.className}`}>
       <body className="select:text-primary-foreground bg-background leading-8 text-foreground selection:bg-primary">
-        <div className="mx-auto max-w-screen-lg">
-          {props.children}
-          <Analytics />
-        </div>
+        <div className="mx-auto max-w-screen-lg">{props.children}</div>
       </body>
     </html>
   );
