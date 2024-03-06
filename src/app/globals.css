@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    scroll-behavior: smooth;
+    --background: 0 100% 4%;
+    --foreground: 0 100% 98.6%;
+
+    --primary: 0 100% 80%;
+    --primary-foreground: 0 100% 20%;
+  }
+
+  :focus-visible {
+    outline-style: solid;
+    outline-width: 2px;
+    outline-offset: 3px;
+    outline-color: hsl(var(--primary));
+  }
+
+  button {
+    cursor: pointer;
+  }
+}
+
+@layer components {
+  .bezel {
+    box-shadow:
+      inset 0 2px 0 0 hsla(0, 0%, 100%, 0.2),
+      inset 0 -1px 0 0 rgba(0, 0, 0, 0.25),
+      0 2px 6px 0 rgba(0, 0, 0, 0.1);
+  }
+}
